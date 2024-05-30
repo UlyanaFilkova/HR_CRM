@@ -52,7 +52,6 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: hidden;
   text-rendering: optimizeSpeed;
 }
 
@@ -112,13 +111,13 @@ body {
   -moz-column-gap: 1.6%;
        column-gap: 1.6%;
   grid-template-columns: 22% 25% 30% 20%;
-  grid-template-rows: calc(5% + 10px) 87%;
+  grid-template-rows: max(60px, 5vh) 87%;
 }
 
 @media (min-width: 1800px) {
   .wrapper {
     grid-template-columns: 350px 400px calc(87vw - 1100px) 350px;
-    grid-template-rows: max(30px, 5vh) 100vh;
+    grid-template-rows: max(60px, 5vh) 87%;
   }
 }
 .vacancies {
@@ -160,7 +159,7 @@ body {
 
 .vacancies__subtitle {
   font-size: 12.7px;
-  color: #b3bac5;
+  color: #909AAA;
 }
 
 .vacancies__new-vacancy {
@@ -188,7 +187,7 @@ body {
   grid-row-end: 2;
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 20px 0 30px;
 }
 
 .filters__list {
@@ -235,15 +234,84 @@ body {
   width: 30px;
 }
 
-.resume_list {
-  background-color: #000000;
+.resume-list {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+  justify-content: start;
 }
 
-.resume_display {
+.resume-list__resume {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  justify-content: start;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px 10px 5px 5px;
+}
+
+.resume-list__resume_active {
+  background-color: #eeeff2;
+}
+
+.resume-list__photo-container {
+  width: 68.5px;
+  height: 68.5px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+@media (max-width: 1150px) {
+  .resume-list__photo-container {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+.resume-list__photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.resume-list__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resume-list__name {
+  font-size: 17px;
+}
+
+.resume-list__position {
+  font-size: 12.7px;
+  color: #909aaa;
+}
+
+.resume-list__score {
+  font-size: 10px;
+  color: #909aaa;
+  font-weight: 500;
+}
+
+.resume-list__score-number {
+  color: #6f7c91;
+  font-size: 14px;
+}
+
+.resume-list__score-number_good {
+  color: #0dae4d;
+}
+
+.resume-display {
   background-color: #000000;
   grid-column-start: 3;
   grid-column-end: 4;
@@ -251,7 +319,7 @@ body {
   grid-row-end: 3;
 }
 
-.resume_info {
+.resume-info {
   background-color: #000000;
   grid-column-start: 4;
   grid-column-end: 5;
