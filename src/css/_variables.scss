@@ -6,8 +6,6 @@
 
 // цвета
 
-$color-body-background: #ffffff;
-$color-primary-font: #000000;
 $color-button: #6f7c91;
 $color-secondary-font: #a9b0bd;
 $color-rating-font: #768397;
@@ -20,11 +18,17 @@ $color-history-background: #f6f7f8;
 $primary-font: "Inter", sans-serif;
 $backup-font: "Open Sans", "Segoe UI", Tahoma, Helvetica, Verdana, sans-serif;
 
+// размеры
+$new-button-size: 30px;
+
 // VACANCIES
 
 // цвета
 
 $color-vacancies-background: #eeeff2;
 $color-vacancies-active: #dde0e5;
-$color-vacancies-primary-font: #0c0c0c;
-$color-vacancies-secondary-font: #b3bac5;
+$color-vacancies-subtitle-font: #b3bac5;
+
+// отступы
+
+$padding-vacancies: 27px;
