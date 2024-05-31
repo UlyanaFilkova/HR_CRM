@@ -140,6 +140,16 @@ body {
 
 .vacancies__list {
   flex: 1;
+  overflow: auto;
+}
+
+.vacancies__list::-webkit-scrollbar {
+  width: 13px;
+}
+
+.vacancies__list::-webkit-scrollbar-thumb {
+  background: #cdd1d8; /* Цвет фона полосы прокрутки */
+  border-radius: 10px;
 }
 
 .vacancies__vacancy {
