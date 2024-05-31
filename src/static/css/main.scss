@@ -393,7 +393,7 @@ body {
 
   background-color: $color-light-background;
   border-radius: 25px;
-  padding: 13% 13% 15px;
+  padding: 3em 13% 15px;
 
   display: flex;
   flex-direction: column;
@@ -415,6 +415,27 @@ body {
 .resume-info__score span {
   font-size: 40px;
   color: $color-good-rating-font;
+}
+
+.resume-info__score-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 2.6em;
+  padding: 3px;
+  border: 1px solid #ccc;
+  color: $color-good-rating-font;
+  border-radius: 4px;
+  font-size: 32px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+  background-color: inherit;
+}
+
+.resume-info__score-input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 3px rgba(0, 102, 204, 0.5);
 }
 
 .resume-info__photo-container {
