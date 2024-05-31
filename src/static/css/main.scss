@@ -388,9 +388,22 @@ body {
   flex-direction: column;
   align-items: start;
   height: fit-content;
+
+  position: relative;
 }
 
 .resume-info__score {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  font-size: 21px;
+  color: $color-rating-font-darker;
+}
+
+.resume-info__score span {
+  font-size: 40px;
+  color: $color-good-rating-font;
 }
 
 .resume-info__photo-container {
