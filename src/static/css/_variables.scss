@@ -6,13 +6,13 @@
 
 // цвета
 
-$color-button: #6f7c91;
-$color-secondary-font: #909aaa;
-$color-rating-font: #768397;
-$color-good-rating-font: #0dae4d;
-$color-picture-background: #ededed;
-$color-picture-background-darker: #ebedef;
-$color-history-background: #f6f7f8;
+// $color-button: #6f7c91;
+// $color-secondary-font: #909aaa;
+// $color-rating-font: #768397;
+// $color-good-rating-font: #0dae4d;
+// $color-picture-background: #ededed;
+// $color-picture-background-darker: #ebedef;
+// $color-history-background: #f6f7f8;
 
 // шрифты
 $primary-font: "Inter", sans-serif;
@@ -25,10 +25,22 @@ $new-button-size: 30px;
 
 // цвета
 
-$color-vacancies-background: #eeeff2;
-$color-vacancies-active: #dde0e5;
-$color-vacancies-subtitle-font: #909AAA;
+// $color-vacancies-background: #eeeff2;
+// $color-vacancies-active: #dde0e5;
+// $color-vacancies-subtitle-font: #909aaa;
 
 // отступы
 
 $padding-vacancies: 27px;
+
+// ЦВЕТА
+$color-light-background: #f6f7f8;
+$color-medium-background: #eeeff2;
+$color-dark-background: #dde0e5;
+// $color-vacancies-background: #eeeff2;
+// $color-vacancies-active: #dde0e5;
+
+$color-secondary-font: #909aaa;
+$color-rating-font: #768397;
+$color-button: #6f7c91;
+$color-good-rating-font: #0dae4d;
