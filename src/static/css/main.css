@@ -143,8 +143,6 @@ body {
   overflow: auto;
 }
 
-/* Изменение ширины полосы прокрутки */
-/* Для Firefox */
 /* Legacy browsers with `::-webkit-scrollbar-*` support */
 @supports selector(::-webkit-scrollbar) {
   .vacancies__list::-webkit-scrollbar-thumb {
@@ -154,13 +152,21 @@ body {
     background: #eeeff2;
   }
   .vacancies__list::-webkit-scrollbar {
-    max-width: 10px;
+    width: 6px;
   }
 }
 /* Modern browsers with `scrollbar-*` support */
 @supports (scrollbar-width: auto) {
   .vacancies__list {
     scrollbar-color: #c7ccd5 #eeeff2;
+    scrollbar-width: thin;
+  }
+}
+/* Legacy browsers with `-ms-` prefix (Internet Explorer)*/
+@supports (-ms-ime-align: auto) {
+  .vacancies__list {
+    scrollbar-base-color: #c7ccd5;
+    scrollbar-track-color: #eeeff2;
     scrollbar-width: thin;
   }
 }
