@@ -143,25 +143,27 @@ body {
   overflow: auto;
 }
 
-.vacancies__list::-webkit-scrollbar {
-  width: 13px;
-  background-color: #eeeff2;
+/* Изменение ширины полосы прокрутки */
+/* Для Firefox */
+/* Legacy browsers with `::-webkit-scrollbar-*` support */
+@supports selector(::-webkit-scrollbar) {
+  .vacancies__list::-webkit-scrollbar-thumb {
+    background: #c7ccd5;
+  }
+  .vacancies__list::-webkit-scrollbar-track {
+    background: #eeeff2;
+  }
+  .vacancies__list::-webkit-scrollbar {
+    max-width: 10px;
+  }
 }
-
-.vacancies__list::-webkit-scrollbar:hover {
-  background-color: #eeeff2;
+/* Modern browsers with `scrollbar-*` support */
+@supports (scrollbar-width: auto) {
+  .vacancies__list {
+    scrollbar-color: #c7ccd5 #eeeff2;
+    scrollbar-width: thin;
+  }
 }
-
-.vacancies__list::-webkit-scrollbar-thumb {
-  /* Цвет фона полосы прокрутки */
-  background-color: #c7ccd5;
-  border-radius: 10px;
-}
-
-.vacancies__list::-webkit-scrollbar-thumb:hover {
-  background-color: #c7ccd5;
-}
-
 .vacancies__vacancy {
   display: block;
   padding: 10px 27px;
