@@ -390,29 +390,22 @@ body {
 }
 
 .resume-info__score {
+  width: 100%;
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(0%);
+  top: 2px;
   font-size: 21px;
   color: #939dac;
-}
-
-.resume-info__score span {
-  font-size: 40px;
-  color: #0dae4d;
 }
 
 .resume-info__score-input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 2.6em;
-  padding: 3px;
-  border: 1px solid #ccc;
-  color: #0dae4d;
-  border-radius: 4px;
-  font-size: 32px;
+  width: 2em;
+  border: 0px;
+  border-bottom: 1px solid #6f7c91;
+  color: #768397;
+  font-size: 1.5em;
   text-align: center;
   transition: border-color 0.3s ease;
   background-color: inherit;
@@ -420,8 +413,7 @@ body {
 
 .resume-info__score-input:focus {
   outline: none;
-  border-color: #0066cc;
-  box-shadow: 0 0 3px rgba(0, 102, 204, 0.5);
+  box-shadow: 0 4px 3px -3px #768397;
 }
 
 .resume-info__photo-container {
