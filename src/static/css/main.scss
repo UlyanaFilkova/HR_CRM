@@ -158,7 +158,9 @@ body {
 }
 
 .vacancies__list::-webkit-scrollbar-thumb {
-  background: $color-scroll-bar; /* Цвет фона полосы прокрутки */
+  /* Цвет фона полосы прокрутки */
+  background: $color-scroll-bar; 
+
   border-radius: 10px;
 }
 
@@ -497,3 +499,5 @@ body {
 }
 .resume-info__contacts {
 }
+
+// #endregion

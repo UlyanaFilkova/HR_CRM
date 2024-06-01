@@ -148,7 +148,8 @@ body {
 }
 
 .vacancies__list::-webkit-scrollbar-thumb {
-  background: #cdd1d8; /* Цвет фона полосы прокрутки */
+  /* Цвет фона полосы прокрутки */
+  background: #c7ccd5;
   border-radius: 10px;
 }
 
