@@ -8,9 +8,11 @@ $backup-font: "Open Sans", "Segoe UI", Tahoma, Helvetica, Verdana, sans-serif;
 
 // размеры
 $new-button-size: 30px;
+$block-height: min(93vh, 800px);
+$filters-height: max(60px, 5vh);
 
 // отступы
-
+$wrapper-row-gap: 1.3%;
 $padding-vacancies: 27px;
 
 // ЦВЕТА
@@ -21,6 +23,7 @@ $color-secondary-font: #909aaa;
 $color-rating-font: #768397;
 $color-rating-font-darker: #939dac;
 $color-button: #6f7c91;
-$color-button-hover: #576276;
+$color-button-hover: #57657e;
 $color-good-rating-font: #0dae4d;
 $color-scroll-bar: #c7ccd5;
+$color-scroll-bar-light: #dde0e5;

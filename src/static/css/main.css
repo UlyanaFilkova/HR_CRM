@@ -129,7 +129,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #eeeff2;
-  height: min(93vh, 700px);
+  height: min(93vh, 800px);
 }
 
 .vacancies__header {
@@ -202,11 +202,11 @@ body {
 }
 
 .vacancies__new-vacancy:hover p {
-  color: #576276;
+  color: #57657e;
 }
 
 .vacancies__new-vacancy:hover svg {
-  fill: #576276;
+  fill: #57657e;
 }
 
 .vacancies__new-vacancy p {
@@ -279,6 +279,15 @@ body {
 .filters__new-resume svg {
   height: 30px;
   width: 30px;
+  fill: #6f7c91;
+}
+
+.filters__new-resume:hover p {
+  color: #57657e;
+}
+
+.filters__new-resume:hover svg {
+  fill: #57657e;
 }
 
 .resume-list {
@@ -290,8 +299,37 @@ body {
   flex-direction: column;
   align-items: start;
   justify-content: start;
+  height: calc(min(93vh, 800px) - max(60px, 5vh) - 1.3%);
+  overflow: auto;
 }
 
+/* Legacy browsers with `::-webkit-scrollbar-*` support */
+@supports selector(::-webkit-scrollbar) {
+  .resume-list::-webkit-scrollbar-thumb {
+    background: #c7ccd5;
+  }
+  .resume-list::-webkit-scrollbar-track {
+    background: #eeeff2;
+  }
+  .resume-list::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+/* Modern browsers with `scrollbar-*` support */
+@supports (scrollbar-width: auto) {
+  .resume-list {
+    scrollbar-color: #dde0e5 white;
+    scrollbar-width: thin;
+  }
+}
+/* Legacy browsers with `-ms-` prefix (Internet Explorer)*/
+@supports (-ms-ime-align: auto) {
+  .resume-list {
+    scrollbar-base-color: #c7ccd5;
+    scrollbar-track-color: #eeeff2;
+    scrollbar-width: thin;
+  }
+}
 .resume-list__resume {
   display: flex;
   gap: 13px;
