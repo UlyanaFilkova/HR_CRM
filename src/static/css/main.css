@@ -116,7 +116,7 @@ body {
 
 @media (min-width: 1800px) {
   .wrapper {
-    grid-template-columns: 350px 400px calc(87vw - 1100px) 350px;
+    grid-template-columns: 350px 350px calc(87vw - 1150px) 350px;
   }
 }
 .vacancies {
@@ -233,29 +233,35 @@ body {
 .filters__list {
   flex: 1;
   display: flex;
-  gap: 30px;
+  gap: 15px;
   align-items: center;
 }
 
 @media (min-width: 1600px) {
   .filters__list {
-    gap: 45px;
+    gap: 30px;
   }
 }
 @media (max-width: 1150px) {
   .filters__list {
-    gap: 25px;
+    gap: 15px;
   }
 }
 .filters__filter {
   display: block;
   font-size: 17px;
+  padding: 7px 12px;
+}
+
+.filters__filter:hover {
+  background-color: #6f7c91;
+  color: #ffffff;
+  border-radius: 17px;
 }
 
 .filters__filter_active {
   background-color: #6f7c91;
   color: #ffffff;
-  padding: 7px 12px;
   border-radius: 17px;
 }
 
@@ -282,7 +288,6 @@ body {
   grid-row-end: 3;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: start;
   justify-content: start;
 }
@@ -293,8 +298,13 @@ body {
   align-items: center;
   justify-content: start;
   border-radius: 5px;
+  box-sizing: border-box;
   width: 100%;
-  padding: 5px 10px 5px 5px;
+  padding: 10px;
+}
+
+.resume-list__resume:hover {
+  background-color: #eeeff2;
 }
 
 .resume-list__resume_active {
