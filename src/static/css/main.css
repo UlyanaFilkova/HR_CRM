@@ -102,6 +102,7 @@ body {
 }
 
 .wrapper {
+  justify-content: center;
   box-sizing: border-box;
   height: 100vh;
   width: 96%;

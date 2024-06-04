@@ -108,11 +108,11 @@ body {
 }
 
 .wrapper {
+  justify-content: center;
   box-sizing: border-box;
   height: 100vh;
   width: 96%;
   max-width: calc(2100px + 6%);
-  // margin: 0 auto;
   margin: 1.7% 2% 0 2%;
   display: grid;
   row-gap: $wrapper-row-gap;
@@ -125,12 +125,6 @@ body {
 
   grid-template-rows: $filters-height auto;
 }
-
-// @media (min-width: 1800px) {
-//   .wrapper {
-//     grid-template-columns: 350px $resume-list-max-width calc(87vw - 800px);
-//   }
-// }
 
 // #region ВАКАНСИИ
 
@@ -249,10 +243,6 @@ body {
   display: flex;
   align-items: center;
   margin: 20px 0 30px;
-  // max-width: calc(
-  //   $resume-list-max-width + $resume-display-max-width + $resume-info-max-width +
-  //     8%
-  // );
 }
 
 .filters__list {
@@ -280,13 +270,11 @@ body {
 .filters__filter:hover {
   background-color: $color-button;
   color: #ffffff;
-  // padding: 7px 12px;
   border-radius: 17px;
 }
 .filters__filter_active {
   background-color: $color-button;
   color: #ffffff;
-  // padding: 7px 12px;
   border-radius: 17px;
 }
 .filters__new-resume {
@@ -433,11 +421,9 @@ body {
   grid-row-end: 3;
 
   box-sizing: border-box;
-  // height: 100vh;
   height: calc($block-height - $filters-height - $wrapper-row-gap);
   width: 100%;
   max-width: calc($resume-display-max-width + $resume-info-max-width + 4%);
-  // margin-right: 8%;
   display: grid;
   grid-column-gap: 4%;
 
@@ -577,10 +563,7 @@ body {
 
 .resume-info__score-input:focus {
   outline: none;
-  // border-color: $color-rating-font;
   box-shadow: 0 4px 3px -3px $color-rating-font;
-  // border: 0px;
-  // border-bottom: $color-rating-font;
 }
 
 .resume__info-container {
