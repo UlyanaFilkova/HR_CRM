@@ -175,6 +175,10 @@ body {
   padding: 10px 27px;
 }
 
+.vacancies__vacancy:hover {
+  background-color: #dde0e5;
+}
+
 .vacancies__vacancy_active {
   background-color: #dde0e5;
 }
@@ -197,6 +201,14 @@ body {
   align-items: center;
 }
 
+.vacancies__new-vacancy:hover p {
+  color: #576276;
+}
+
+.vacancies__new-vacancy:hover svg {
+  fill: #576276;
+}
+
 .vacancies__new-vacancy p {
   color: #6f7c91;
   font-size: 17.33px;
@@ -205,6 +217,7 @@ body {
 .vacancies__new-vacancy svg {
   height: 30px;
   width: 30px;
+  fill: #6f7c91;
 }
 
 .filters {
