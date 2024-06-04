@@ -111,17 +111,21 @@ body {
   box-sizing: border-box;
   height: 100vh;
   width: 95%;
+  // max-width: 2500px;
+  // margin: 0 auto;
   margin: 1.7% 4% 0 2%;
   display: grid;
   row-gap: $wrapper-row-gap;
   column-gap: 2%;
-  grid-template-columns: 22% 25% 30% 20%;
+  // grid-template-columns: 22% 25% 30% 20%;
+  grid-template-columns: 22% 25% 47%;
+
   grid-template-rows: $filters-height auto;
 }
 
 @media (min-width: 1800px) {
   .wrapper {
-    grid-template-columns: 350px 350px calc(87vw - 1150px) 350px;
+    grid-template-columns: 350px $resume-list-max-width calc(87vw - 800px);
   }
 }
 
@@ -235,13 +239,17 @@ body {
 // #region ФИЛЬТРЫ
 .filters {
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
 
   display: flex;
   align-items: center;
   margin: 20px 0 30px;
+  max-width: calc(
+    $resume-list-max-width + $resume-display-max-width + $resume-info-max-width +
+      8%
+  );
 }
 
 .filters__list {
@@ -414,13 +422,39 @@ body {
   color: $color-good-rating-font;
 }
 // #endregion
-
-// #region ОТОБРАЖЕНИЕ РЕЗЮМЕ
-.resume-display {
+// #region РЕЗЮМЕ
+.resume {
   grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
+
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  max-width: calc($resume-display-max-width + $resume-info-max-width + 4%);
+  // margin-right: 8%;
+  display: grid;
+  column-gap: 4%;
+
+  grid-template-columns: min(60%, $resume-display-max-width) min(
+      40%,
+      $resume-info-max-width
+    );
+}
+
+// @media (min-width: 1800px) {
+//   .resume {
+//     // grid-template-columns: auto 350px;
+//   }
+// }
+//#endregion
+// #region ОТОБРАЖЕНИЕ РЕЗЮМЕ
+.resume-display {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .resume-actions {
@@ -471,14 +505,13 @@ body {
 
 //#region РЕЗЮМЕ КОНТАКТЫ
 .resume-info {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 
   background-color: $color-light-background;
   border-radius: 25px;
-  // padding: 3em 13% 15px;
   padding: 3em 0 15px;
 
   display: flex;
@@ -487,8 +520,6 @@ body {
 
   position: relative;
   height: fit-content;
-  // height: calc($block-height - $filters-height - $wrapper-row-gap);
-  // flex: 1;
   overflow-x: hidden;
 }
 
@@ -528,7 +559,6 @@ body {
   align-items: start;
   height: fit-content;
   overflow-x: hidden;
-  // overflow-y: auto;
   padding: 0 13%;
 }
 
@@ -537,7 +567,6 @@ body {
   box-sizing: border-box;
   width: 14.5vw;
   height: 14.5vw;
-  // overflow: hidden;
   border-radius: 25px;
   background-color: $color-dark-background;
   margin-bottom: 10px;
@@ -551,7 +580,6 @@ body {
 }
 .resume-info__photo-wrapper {
   width: 100%;
-  // padding-bottom: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: inherit;
@@ -560,9 +588,7 @@ body {
 .resume-info__photo {
   width: 100%;
   height: 100%;
-  // padding-bottom: 100%;
   object-fit: cover;
-  // display: block;
 }
 
 .resume-info__name {
