@@ -110,17 +110,17 @@ body {
 .wrapper {
   box-sizing: border-box;
   height: 100vh;
-  width: calc(96% - 15px);
-  max-width: calc(2000px + 6%);
+  width: 96%;
+  max-width: calc(2100px + 6%);
   // margin: 0 auto;
-  margin: 1.7% calc(2% + 15px) 0 2%;
+  margin: 1.7% 2% 0 2%;
   display: grid;
   row-gap: $wrapper-row-gap;
   column-gap: $wrapper-column-gap;
   // grid-template-columns: 22% 25% 30% 20%;
   grid-template-columns: min(22%, 350px) min(25%, 350px) min(
       calc(96% - 22% - 25%),
-      calc(900px + 350px + 2%)
+      calc(1000px + 350px + 2%)
     );
 
   grid-template-rows: $filters-height auto;
@@ -433,24 +433,51 @@ body {
   grid-row-end: 3;
 
   box-sizing: border-box;
-  height: 100vh;
+  // height: 100vh;
+  height: calc($block-height - $filters-height - $wrapper-row-gap);
   width: 100%;
   max-width: calc($resume-display-max-width + $resume-info-max-width + 4%);
   // margin-right: 8%;
   display: grid;
   grid-column-gap: 4%;
 
-  grid-template-columns: min(58%, $resume-display-max-width) min(
-      38%,
+  grid-template-columns: min(63%, $resume-display-max-width) min(
+      33%,
       $resume-info-max-width
     );
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
-// @media (min-width: 1800px) {
-//   .resume {
-//     // grid-template-columns: auto 350px;
-//   }
-// }
+/* Legacy browsers with `::-webkit-scrollbar-*` support */
+@supports selector(::-webkit-scrollbar) {
+  .resume::-webkit-scrollbar-thumb {
+    background: $color-scroll-bar;
+  }
+  .resume::-webkit-scrollbar-track {
+    background: $color-medium-background;
+  }
+  .resume::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+/* Modern browsers with `scrollbar-*` support */
+@supports (scrollbar-width: auto) {
+  .resume {
+    scrollbar-color: $color-scroll-bar-light white;
+    scrollbar-width: thin;
+  }
+}
+
+/* Legacy browsers with `-ms-` prefix (Internet Explorer)*/
+@supports (-ms-ime-align: auto) {
+  .resume {
+    scrollbar-base-color: $color-scroll-bar;
+    scrollbar-track-color: $color-medium-background;
+    scrollbar-width: thin;
+  }
+}
 //#endregion
 // #region ОТОБРАЖЕНИЕ РЕЗЮМЕ
 .resume-display {
@@ -562,7 +589,7 @@ body {
   align-items: start;
   height: fit-content;
   overflow-x: hidden;
-  padding: 0 max(13%, 15px);
+  padding: 0 max(10%, 15px);
   width: 100%;
 }
 
