@@ -110,24 +110,27 @@ body {
 .wrapper {
   box-sizing: border-box;
   height: 100vh;
-  width: 95%;
-  // max-width: 2500px;
+  width: calc(96% - 15px);
+  max-width: calc(2000px + 6%);
   // margin: 0 auto;
-  margin: 1.7% 4% 0 2%;
+  margin: 1.7% calc(2% + 15px) 0 2%;
   display: grid;
   row-gap: $wrapper-row-gap;
-  column-gap: 2%;
+  column-gap: $wrapper-column-gap;
   // grid-template-columns: 22% 25% 30% 20%;
-  grid-template-columns: 22% 25% 47%;
+  grid-template-columns: min(22%, 350px) min(25%, 350px) min(
+      calc(96% - 22% - 25%),
+      calc(900px + 350px + 2%)
+    );
 
   grid-template-rows: $filters-height auto;
 }
 
-@media (min-width: 1800px) {
-  .wrapper {
-    grid-template-columns: 350px $resume-list-max-width calc(87vw - 800px);
-  }
-}
+// @media (min-width: 1800px) {
+//   .wrapper {
+//     grid-template-columns: 350px $resume-list-max-width calc(87vw - 800px);
+//   }
+// }
 
 // #region ВАКАНСИИ
 
@@ -246,10 +249,10 @@ body {
   display: flex;
   align-items: center;
   margin: 20px 0 30px;
-  max-width: calc(
-    $resume-list-max-width + $resume-display-max-width + $resume-info-max-width +
-      8%
-  );
+  // max-width: calc(
+  //   $resume-list-max-width + $resume-display-max-width + $resume-info-max-width +
+  //     8%
+  // );
 }
 
 .filters__list {
@@ -425,7 +428,7 @@ body {
 // #region РЕЗЮМЕ
 .resume {
   grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
 
@@ -435,10 +438,10 @@ body {
   max-width: calc($resume-display-max-width + $resume-info-max-width + 4%);
   // margin-right: 8%;
   display: grid;
-  column-gap: 4%;
+  grid-column-gap: 4%;
 
-  grid-template-columns: min(60%, $resume-display-max-width) min(
-      40%,
+  grid-template-columns: min(58%, $resume-display-max-width) min(
+      38%,
       $resume-info-max-width
     );
 }
@@ -516,7 +519,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 
   position: relative;
   height: fit-content;
@@ -559,25 +562,20 @@ body {
   align-items: start;
   height: fit-content;
   overflow-x: hidden;
-  padding: 0 13%;
+  padding: 0 max(13%, 15px);
+  width: 100%;
 }
 
 .resume-info__photo-container {
   align-self: center;
   box-sizing: border-box;
-  width: 14.5vw;
-  height: 14.5vw;
+  width: 100%;
+  height: min(35vh, 270px);
   border-radius: 25px;
   background-color: $color-dark-background;
   margin-bottom: 10px;
 }
 
-@media (min-width: 1800px) {
-  .resume-info__photo-container {
-    width: 264.1px;
-    height: 264.1px;
-  }
-}
 .resume-info__photo-wrapper {
   width: 100%;
   height: 100%;
