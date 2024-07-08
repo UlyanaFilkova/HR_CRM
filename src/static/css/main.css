@@ -544,7 +544,7 @@ body {
   grid-row-end: 2;
   background-color: #f6f7f8;
   border-radius: 25px;
-  padding: 3em 0 15px;
+  padding: 20px 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -554,12 +554,41 @@ body {
   overflow-x: hidden;
 }
 
-.resume-info__score {
+.resume__info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-x: hidden;
+  padding: 0 max(10%, 15px);
+  width: 100%;
+}
+
+.resume-info__rating-result {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: min(15px, 8%);
+  align-items: end;
+  color: #6f7c91;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.resume-info__rating-result-span {
+  font-size: 24px;
+  line-height: 24px;
+  color: #57657e;
+}
+
+.resume-info__rating-slider {
   width: 100%;
   color: #939dac;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8px;
 }
 
 .resume-info__slider {
@@ -599,34 +628,23 @@ body {
 }
 
 .resume-info__slider::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  outline: none;
+  width: 13px;
+  height: 13px;
   background: #6f7c91;
   border-radius: 50%;
   cursor: pointer;
 }
 
 /* стили для отображения текущей оценки */
-.resume-info__rating {
-  font-size: 24px;
-  font-weight: bold;
-}
-
 /* стили для стрелочек */
 .resume-info__arrow {
   font-size: 24px;
   cursor: pointer;
-}
-
-.resume__info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow-x: hidden;
-  padding: 0 max(10%, 15px);
-  width: 100%;
+  color: #6f7c91;
 }
 
 .resume-info__photo-container {
