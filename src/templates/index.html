@@ -296,16 +296,33 @@
           </div>
         </section>
         <section class="resume-info">
-          <div class="resume-info__score">
-            <!-- <input
-              type="number"
-              step="0.1"
-              min="0"
-              max="10"
-              class="resume-info__score-input"
-            /> -->
-          </div>
           <div class="resume__info-container">
+            <div class="resume-info__score">
+              <!-- <input
+                type="number"
+                step="0.1"
+                min="0"
+                max="10"
+                class="resume-info__score-input"
+              /> -->
+              <button class="resume-info__arrow" id="resume-info__decrease">
+                -
+              </button>
+              <input
+                type="range"
+                id="resume-info__slider"
+                min="0"
+                max="10"
+                value="0"
+                class="resume-info__slider"
+              />
+              <button class="resume-info__arrow" id="resume-info__increase">
+                +
+              </button>
+              <span id="resume-info__rating" class="resume-info__rating"
+                >0</span
+              >
+            </div>
             <div class="resume-info__photo-container">
               <div class="resume-info__photo-wrapper">
                 <img src="../static/img/woman.jpg" class="resume-info__photo" />
@@ -379,7 +396,6 @@
         </section>
       </div>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <script src="../static/js/index.js"></script>
   </body>
 </html>
